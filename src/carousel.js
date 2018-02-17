@@ -86,33 +86,6 @@ const Carousel = createReactClass({
     wrapAround: PropTypes.bool,
   },
 
-  getDefaultProps() {
-    return {
-      afterSlide: function() {},
-      autoplay: false,
-      autoplayInterval: 3000,
-      beforeSlide: function() {},
-      cellAlign: 'left',
-      cellSpacing: 0,
-      data: function() {},
-      decorators: decorators,
-      dragging: true,
-      easing: 'easeOutCirc',
-      edgeEasing: 'easeOutElastic',
-      framePadding: '0px',
-      frameOverflow: 'hidden',
-      slideIndex: 0,
-      slidesToScroll: 1,
-      slidesToShow: 1,
-      slideWidth: 1,
-      speed: 500,
-      swiping: true,
-      vertical: false,
-      width: '100%',
-      wrapAround: false,
-    };
-  },
-
   getInitialState() {
     return {
       currentSlide: this.props.slideIndex,
@@ -1063,6 +1036,31 @@ const Carousel = createReactClass({
     }
   },
 });
+
+Carousel.defaultProps = {
+  afterSlide: function() {},
+  autoplay: false,
+  autoplayInterval: 3000,
+  beforeSlide: function() {},
+  cellAlign: 'left',
+  cellSpacing: 0,
+  data: function() {},
+  decorators: decorators,
+  dragging: true,
+  easing: 'easeOutCirc',
+  edgeEasing: 'easeOutElastic',
+  framePadding: '0px',
+  frameOverflow: 'hidden',
+  slideIndex: 0,
+  slidesToScroll: 1,
+  slidesToShow: 1,
+  slideWidth: 1,
+  speed: 500,
+  swiping: true,
+  vertical: false,
+  width: '100%',
+  wrapAround: false,
+};
 
 Carousel.ControllerMixin = {
   getInitialState() {
